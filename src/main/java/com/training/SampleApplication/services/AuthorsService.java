@@ -1,12 +1,13 @@
-package service;
+package com.training.SampleApplication.services;
 
-import model.Author;
+import com.training.SampleApplication.model.Author;
+import com.training.SampleApplication.repositories.AuthorsRepositoryJpa;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
-import repository.AuthorsRepositoryJpa;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Service
@@ -24,7 +25,7 @@ public class AuthorsService {
     }
 
     public Author getAuthorById(int id) {
-        return authorsRepository.findById(id).orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND));
+        return authorsRepository.findById(id).orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Author with id: " + id + " not found"));
     }
 
     public void deleteAuthorById(int id) {

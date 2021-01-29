@@ -1,6 +1,6 @@
-package repository;
+package com.training.SampleApplication.repositories;
 
-import model.Author;
+import com.training.SampleApplication.model.Author;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

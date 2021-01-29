@@ -1,6 +1,8 @@
-package controller;
+package com.training.SampleApplication.controller;
 
-import model.Book;
+import com.training.SampleApplication.controllers.BooksController;
+import com.training.SampleApplication.model.Book;
+import com.training.SampleApplication.services.BooksService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -13,7 +15,6 @@ import org.springframework.mock.web.MockHttpServletResponse;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
-import service.BooksService;
 
 import java.util.List;
 
