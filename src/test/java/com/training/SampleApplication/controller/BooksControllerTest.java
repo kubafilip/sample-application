@@ -50,8 +50,12 @@ class BooksControllerTest {
     @Test
     void getAllBooks() throws Exception {
         //given
-        Book b1 = new Book(1,bookName1, 1, 2000);
-        Book b2 = new Book(1,bookName2, 1, 1990);
+        Book b1 = new Book();
+        b1.setTitle(bookName1);
+        b1.setReleased(2000);
+        Book b2 = new Book();
+        b2.setTitle(bookName2);
+        b2.setReleased(1990);
         given(booksService.getAllBooks()).willReturn(List.of(b1,b2));
         //when
         MockHttpServletResponse response = mockMvc.perform(MockMvcRequestBuilders
