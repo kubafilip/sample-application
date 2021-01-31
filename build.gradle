@@ -5,8 +5,10 @@ plugins {
 }
 
 group = 'com.training'
-version = '0.0.1-SNAPSHOT'
+version = '1.0'
 sourceCompatibility = '11'
+//rootProject.name = "spring-app"
+archivesBaseName = "spring-app"
 
 configurations {
 	compileOnly {
@@ -25,13 +27,8 @@ dependencies {
 	runtimeOnly 'org.postgresql:postgresql'
 	annotationProcessor 'org.projectlombok:lombok'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
-}
 
-//task someJar(type: Jar) {
-//	manifest {
-//		attributes 'Main-Class': 'com.training.SampleApplication'
-//	}
-//}
+}
 
 test {
 	useJUnitPlatform()
